@@ -1,0 +1,11 @@
+.opciones{
+    height: 250px;
+}
+
+.der{
+    border-radius: 125px 0 0 125px;
+}
+
+.izq{
+    border-radius: 0 125px 125px 0;
+}

@@ -1,0 +1,529 @@
+<html>
+ <head>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/carrousel.css">
+  <link rel="stylesheet" href="css/servicios.css">
+  <link rel="stylesheet" href="css/opciones.css">
+  <link rel="stylesheet" href="css/contacto.css">
+  <link rel="stylesheet" href="css/animaciones.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/map.css">
+  <link rel="stylesheet" href="css/modales/modal.css">
+  <link rel="stylesheet" href="css/modales/modal1.css">
+  <link rel="stylesheet" href="css/modales/modal2.css">
+  <link rel="stylesheet" href="css/modales/modal3.css">
+  <link rel="stylesheet" href="css/modales/modal4.css">
+  <link rel="stylesheet" href="css/modales/modal5.css">
+  <link rel="stylesheet" href="css/modales/modal6.css">
+  <link rel="stylesheet" href="css/modales/modal7.css">
+  <link rel="stylesheet" href="css/modales/modal8.css">
+  <link rel="stylesheet" href="css/modales/modal9.css">
+  <link rel="stylesheet" href="css/modales/modal10.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+ <body class="bg-blue-200">
+  <!-- Header -->
+  <header  class="bg-blue-900 text-white p-4 flex justify-between items-center">
+   <div id="Inicio" class="flex items-center">
+    <img alt="Logo" class="mr-2" height="50" src="assets/demo-1-todo-tramite-11.png" width="100"/>
+   </div>
+   <div class="flex space-x-4">
+    <i>
+      <a href="#quienes_somos">QUIENES SOMOS</a>
+      
+    </i>
+    <i>
+      <a href="#servicios_requeridos">SERVICIOS</a>
+      
+    </i>
+    <i>
+      <a href="#contacto">CONTACTO</a>
+      
+    </i>
+   </div>
+  </header>
+  <!-- Main Banner -->
+  <section class="bg-blue-400 text-center py-8">
+   <h1 class="animate__animated animate__fadeIn text-8xl  text-white montserrat-underline">
+    EXPERTOS EN TRASPASOS VEHICULARES
+   </h1>
+   <button class="btn_1 mt-4 bg-blue-900 text-white py-2 px-4 rounded-full">
+    <a href="#contacto">TRASPASO AQUÍ</a>
+    
+   </button>
+  </section>
+  <!-- Carousel Placeholder -->
+  <section class="bg-blue-900 text-center corrousel">
+    <div class="carousel">
+        <button class="carousel-button prev">‹</button>
+        <div class="carousel-images">
+          <img src="assets/vehiculos/1.png" alt="Imagen 1">
+          <img src="assets/vehiculos/2.png" alt="Imagen 2">
+          <img src="assets/vehiculos/3.png" alt="Imagen 3">
+          <img src="assets/vehiculos/4.png" alt="Imagen 4">
+        </div>
+        <button class="carousel-button next">›</button>
+      </div>
+  </section>
+  <!-- Services Section -->
+
+  <section class="servicios bg-blue-200 text-center py-8">
+   <div class="flex justify-center space-x-4 mb-8">
+    <div class=" circulos bg-blue-900 text-white p-4 rounded-full flex items-center justify-center">
+     <div id="quienes_somos" class="animate__animated animacion1">
+      <i class="fas fa-users text-8xl">
+      </i>
+      <p class="mt-2 text-2xl">
+       QUIENES SOMOS
+      </p>
+      <a id="openModal" class=" modal-button text-blue-400" style="background-color: transparent;">
+       click aquí
+      </a>
+     </div>
+    </div>
+    <div class="circulos bg-blue-500 text-white p-4 rounded-full flex items-center justify-center">
+     <div class="animacion1">
+      <i class="fas fa-chart-line text-8xl">
+      </i>
+      <p class="mt-2 text-2xl">
+       SERVICIOS MAS REQUERIDOS
+      </p>
+      <a class="text-blue-900" href="#servicios_requeridos">
+       click aquí
+      </a>
+     </div>
+    </div>
+    <div class=" circulos bg-blue-900 text-white p-4 rounded-full flex items-center justify-center">
+     <div class="animacion1">
+      <i class="fas fa-phone text-8xl">
+      </i>
+      <p class="mt-2 text-2xl">
+       CONTACTO
+      </p>
+      <a class="text-blue-400" href="#contacto">
+       click aquí
+      </a>
+     </div>
+    </div>
+   </div>
+
+   <div class="modal-overlay" id="modalOverlay"></div>
+   <div class="modal" id="modal">
+       <div class="modal-header1">Tramites vehiculares</div>
+       <h1 class="text-4xl font-bold text-gray-800">Sin Obstáculos</h1>
+       <p>
+        Nuestro equipo de expertos abogados está dedicado a proteger <br> tus derechos y 
+        brindarte soluciones efectivas en todas las cuestiones legales relacionadas con automóviles, <br>
+        motocicletas y otros medios de transporte
+       </p>
+       <br>
+       <p>Deja en nuestras manos las complejidades legales para que <br>
+        puedas disfrutar de tus vehículos sin preocupaciones.</p>
+       <div class="modal-footer">
+           <button class="modal-button close" id="closeModal">Cerrar</button>
+       </div>
+   </div>
+
+   <h2 id="servicios_requeridos" class="text-8xl font-bold text-white">
+    Todos nuestros servicios
+   </h2>
+   <div class="grid grid-cols-2 gap-4 mt-8">
+    <div id="openModal1" class="modal-button1 serv_izq opciones izq bg-blue-900 text-white p-4  flex items-center justify-center" style="background-color: rgb(6, 6, 121);">
+     <a class="text-blue-400" href="#">
+      <img src="assets/iconos/coche.png" alt="trasnpaso vehicualr" width="50px" style="margin: 0 auto; filter: brightness(0) invert(1);">
+      <h3><strong>TRASPASO VEHICULAR</strong></h3>
+      <h5>
+        Servicio diseñado para faciliar el <br>
+        proceso de transferir la propiedad <br>
+        de un automovil de manera segura <br>
+        y eficiente.
+      </h5>
+    </a>
+    </div>
+
+    <div class="modal-overlay1" id="modalOverlay1"></div>
+    <div class="modal1" id="modal1">
+        <div class="modal-header1">Requisitos</div>
+        <ol class="list-decimal ml-6 space-y-2 text-gray-700">
+          <li>Título de propiedad de vehiculo a nombre del vendedor</li>
+          <li>Documento personal de identificacion (DPI) del vendedor</li>
+          <li>Voleta de pago del impuesto de circulación del vehículo vigente</li>
+        </ol>
+        <div class="modal-footer1">
+            <button class="modal-button1 close1" id="closeModal1">Cerrar</button>
+        </div>
+    </div>
+
+
+    <div id="openModal2" class="modal-button2 serv_der opciones der bg-blue-900 text-white p-4  flex items-center justify-center"  style="background-color: rgb(6, 6, 121);" >
+     <a class="text-blue-400" href="#">
+      <img src="assets/iconos/placa.png" alt="trasnpaso vehicualr" width="50px" style="margin: 0 auto; filter: brightness(0) invert(1);">
+      <h3><strong>REPOSICIÓN DE TÏTULO</strong></h3>
+      <h5>
+        Este servicio se enfoca en obtener <br>
+        placas de reemplazo válidad y <br>
+        autorizada por las autoridades <br>
+        competentes.
+      </h5>
+     </a>
+    </div>
+
+    <div class="modal-overlay2" id="modalOverlay2"></div>
+    <div class="modal2" id="modal2">
+        <div class="modal-header2">Requisitos</div>
+        <ol class="list-decimal ml-6 space-y-2 text-gray-700">
+          <li>Formulario de solicitud de reposición de título</li>
+          <li>Denuncia de pérdida ante la policia nacional civil (PNC)</li>
+          <li>Boleta de pago de arancel</li>
+          <li>Documento de identificación personal (DPI) del propietario del vehiculo</li>
+          <li>Copia del ultimo titulo registrado</li>
+        </ol>
+        <div class="modal-footer2">
+            <button class="modal-button1 close2" id="closeModal2">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="openModal3" class="modal-button3 serv_izq opciones izq bg-blue-900 text-white p-4  flex items-center justify-center" style="background-color: rgb(6, 6, 121);">
+     <a class="text-blue-400" href="#">
+      <img src="assets/iconos/expertaje.png" alt="trasnpaso vehicualr" width="50px" style="margin: 0 auto; filter: brightness(0) invert(1);">
+      <h3><strong>EXPERTAJE</strong></h3>
+      <h5>
+        Especializado en un valuación <br>
+        exhaustiva y detalleda del estado y <br>
+        valor de un automóvil. Realizado <br>
+        por expertos.
+      </h5>
+     </a>
+    </div>
+
+    <div class="modal-overlay3" id="modalOverlay3"></div>
+    <div class="modal3" id="modal3">
+        <div class="modal-header3">Requisitos</div>
+        <ol class="list-decimal ml-6 space-y-2 text-gray-700">
+          <li>Documento de identificación</li>
+          <li>Título de propiedad de vehiculo</li>
+          <li>Boleta de pago de impuesto de circulación de vehiculo</li>
+          <li>Certificado de revisión mecánica</li>
+          <li>Pago de tarifa por el servicio de expertaje</li>
+        </ol>
+        <div class="modal-footer3">
+            <button class="modal-button3 close3" id="closeModal3">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="openModal4" class="modal-button4 serv_der opciones der bg-blue-900 text-white p-4  flex items-center justify-center" style="background-color: rgb(6, 6, 121);">
+     <a class="text-blue-400" href="#">
+      <img src="assets/iconos/original.png" alt="trasnpaso vehicualr" width="50px" style="margin: 0 auto; filter: brightness(0) invert(1);">
+      <h3><strong>AUTÉNTICAS</strong></h3>
+      <h5>
+        Verificación oficial y certificación <br>
+        de la autenticidad y validez de los <br>
+        documentos y datos relacionados <br>
+        con un vehiculo
+      </h5>
+     </a>
+    </div>
+
+    <div class="modal-overlay4" id="modalOverlay4"></div>
+    <div class="modal4" id="modal4">
+        <div class="modal-header4">Requisitos</div>
+        <ol class="list-decimal ml-6 space-y-2 text-gray-700">
+          <li>Original de documentos a autenticar</li>
+          <li>Fotocopia del documento</li>
+          <li>Documento de identificación personal (DPI) del interesaro</li>
+          <li>Pago de tasa correspondiento en el banco autorizado</li>
+        </ol>
+        <div class="modal-footer4">
+            <button class="modal-button4 close4" id="closeModal4">Cerrar</button>
+        </div>
+    </div>
+    
+    <div id="openModal5" class="modal-button5 serv_izq opciones izq bg-blue-900 text-white p-4  flex items-center justify-center" style="background-color: rgb(6, 6, 121);">
+     <a class="text-blue-400" href="#">
+      <img src="assets/iconos/carta.png" alt="trasnpaso vehicular" width="50px" style="margin: 0 auto; filter: brightness(0) invert(1);">
+      <h3><strong>CARTA DE PODER</strong></h3>
+      <h5>
+        Una carta de poder es un <br>
+        documento legal que autoriza a  <br>
+        una persona a actuar en nombre de <br>
+        otra en asuntos especificos.
+      </h5>
+     </a>
+    </div>
+
+    <div class="modal-overlay5" id="modalOverlay5"></div>
+    <div class="modal5" id="modal5">
+        <div class="modal-header5">Requisitos</div>
+        <ol class="list-decimal ml-6 space-y-2 text-gray-700">
+          <li>Documento de identificación del otorgante</li>
+          <li>Nombre completo y datos de identicación del empoderado</li>
+          <li>Descripción clara de los poderes otorgados</li>
+          <li>Fecha de emisión del poder</li>
+          <li>Firma del otorgante y, en alugnos casos, <br>
+              presencia de una notario público para su legalización
+          </li>
+        </ol>
+        <div class="modal-footer5">
+            <button class="modal-button5 close5" id="closeModal5">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="openModal6" class="modal-button6 serv_der opciones der bg-blue-900 text-white p-4  flex items-center justify-center" style="background-color: rgb(6, 6, 121);">
+     <a class="text-blue-400" href="#">
+      <img src="assets/iconos/pagar.png" alt="trasnpaso vehicualr" width="50px" style="margin: 0 auto; filter: brightness(0) invert(1);">
+      <h3><strong>COMPRA VENTA</strong></h3>
+      <h5>
+        Diseñado para ofrecer a nuestros <br>
+        clientes una experiencia fluida <br>
+        confiable al adquirir o vender un <br>
+        automovíl.
+      </h5>
+     </a>
+    </div>
+
+    <div class="modal-overlay6" id="modalOverlay6"></div>
+    <div class="modal6" id="modal6">
+        <div class="modal-header6">Requisitos</div>
+        <ol class="list-decimal ml-6 space-y-2 text-gray-700">
+          <li>Titulo de propiedad del vehículo</li>
+          <li>Documento de identificación del vendedor</li>
+          <li>Documento de identicación del comprador</li>
+          <li>NIT del comprador</li>
+          <li>Firma y sellado por parte del vendedor</li>
+          <li>Pago del impuesto de Circulación de vehículos</li>
+          <li>Certificado de revisión mecánica</li>
+        </ol>
+        <div class="modal-footer6">
+            <button class="modal-button6 close6" id="closeModal6">Cerrar</button>
+        </div>
+    </div>
+    
+    <div id="openModal7" class="modal-button7 serv_izq opciones izq bg-blue-900 text-white p-4  flex items-center justify-center" style="background-color: rgb(6, 6, 121);">
+     <a class="text-blue-400" href="#">
+      <img src="assets/iconos/pintura.png" alt="trasnpaso vehicualr" width="50px" style="margin: 0 auto; filter: brightness(0) invert(1);">
+      <h3><strong>CAMBIO DE COLOR</strong></h3>
+      <h5>
+        Diseñado para ofrecer a nuestros <br>
+        clientes una experiencia fluida y <br>
+        confiable al adquirir o vender un <br>
+        automovíl.
+      </h5>
+     </a>
+    </div>
+
+    <div class="modal-overlay7" id="modalOverlay7"></div>
+    <div class="modal7" id="modal7">
+        <div class="modal-header7">Requisitos</div>
+        <div>Contenido del modal va aquí.</div>
+        <div class="modal-footer7">
+            <button class="modal-button7 close7" id="closeModal7">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="openModal8" class="modal-button8 serv_der opciones der bg-blue-900 text-white p-4  flex items-center justify-center" style="background-color: rgb(6, 6, 121);">
+     <a class="text-blue-400" href="#">
+      <img src="assets/iconos/lubricacion.png" alt="trasnpaso vehicualr" width="50px" style="margin: 0 auto; filter: brightness(0) invert(1);">
+      <h3><strong>CAMBIO DE MOTOR</strong></h3>
+      <h5>
+        Verificación oficial y certificación <br>
+        de la autenticidad y validez de los <br>
+        documentos y datos relacionados <br>
+        con un vehículo.
+      </h5>
+     </a>
+    </div>
+
+    <div class="modal-overlay8" id="modalOverlay8"></div>
+    <div class="modal8" id="modal8">
+        <div class="modal-header8">Requisitos</div>
+        <div>Contenido del modal va aquí.</div>
+        <div class="modal-footer8">
+            <button class="modal-button8 close8" id="closeModal8">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="openModal9" class="modal-button9 serv_izq opciones izq bg-blue-900 text-white p-4  flex items-center justify-center" style="background-color: rgb(6, 6, 121);">
+     <a class="text-blue-400" href="#">
+      <img src="assets/iconos/boligrafo.png" alt="trasnpaso vehicualr" width="50px" style="margin: 0 auto; filter: brightness(0) invert(1);">
+      <h3><strong>DECLARACIÓN JURADA</strong></h3>
+      <h5>
+        Verificación y certificación <br>
+        de la autenticidad y validez de los <br>
+        documentos y datos relacionados <br>
+        con un vehículo.
+      </h5>
+     </a>
+    </div>
+
+    <div class="modal-overlay9" id="modalOverlay9"></div>
+    <div class="modal9" id="modal9">
+        <div class="modal-header9">Requisitos</div>
+        <div>Contenido del modal va aquí.</div>
+        <div class="modal-footer9">
+            <button class="modal-button9 close9" id="closeModal9">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="openModal10" class="modal-button10 serv_der opciones der bg-blue-900 text-white p-4  flex items-center justify-center" style="background-color: rgb(6, 6, 121);">
+     <a class="text-blue-400" href="#">
+      <img src="assets/iconos/primeraPlaca.png" alt="trasnpaso vehicualr" width="50px" style="margin: 0 auto; filter: brightness(0) invert(1);">
+      <h3><strong>PRIMERAS PLACAS</strong></h3>
+      <h5>
+        Este servicio se enfoca en obtener <br>
+        placas de reemplazo válidas y <br>
+        autorizadas por las autoridades <br>
+        competentes.
+      </h5>
+     </a>
+    </div>
+
+    <div class="modal-overlay10" id="modalOverlay10"></div>
+    <div class="modal10" id="modal10">
+        <div class="modal-header10">Requisitos</div>
+        <div>Contenido del modal va aquí.</div>
+        <div class="modal-footer10">
+            <button class="modal-button10 close10" id="closeModal10">Cerrar</button>
+        </div>
+    </div>
+   </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contacto" class="bg-blue-900 text-center py-8">
+   <div class="contact">
+
+    <div class="contacto bg-blue-500 text-white p-4">
+     <h3 class="text-xl font-bold">
+      Contáctanos
+     </h3>
+     <form>
+      <div class="mb-4">
+       <label class="block text-white mb-2" for="name">
+        Nombre
+        <span class="text-red-500">
+         *
+        </span>
+       </label>
+       <input class="w-full p-2 border border-gray-300 rounded" id="name" placeholder="Nombre" type="text"/>
+      </div>
+      <div class="mb-4 flex flex-col sm:flex-row sm:space-x-4">
+       <div class="flex-1 mb-4 sm:mb-0">
+        <label class="block text-white mb-2" for="phone">
+         Teléfono
+         <span class="text-red-500">
+          *
+         </span>
+        </label>
+        <input class="w-full p-2 border border-gray-300 rounded" id="phone" placeholder="Teléfono" type="text"/>
+       </div>
+       <div class="flex-1">
+        <label class="block text-white mb-2" for="email">
+         Correo electrónico
+         <span class="text-red-500">
+          *
+         </span>
+        </label>
+        <input class="w-full p-2 border border-gray-300 rounded" id="email" placeholder="Correo electrónico" type="email"/>
+       </div>
+      </div>
+      <div class="mb-4">
+       <label class="block text-white mb-2" for="service">
+        Servicio a Cotizar
+        <span class="text-red-500">
+         *
+        </span>
+       </label>
+       <select class="w-full p-2 border border-gray-300 rounded" id="service">
+        <option>
+         Traspaso de vehículos
+        </option>
+       </select>
+      </div>
+      <div class="mb-4">
+       <label class="block text-white mb-2" for="message">
+        Mensaje
+       </label>
+       <textarea class="w-full p-2 border border-gray-300 rounded h-32" id="message" placeholder="Mensaje"></textarea>
+      </div>
+      
+       <button class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700" type="submit">
+        ENVIAR
+       </button>
+     </form>
+    </div>
+
+    <div class=" contacto bg-blue-500 text-white p-6">
+     <h3 class="text-xl font-bold">
+      Encuentranos
+     </h3>
+     <div id="map"></div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-blue-200 text-center py-4">
+    <footer class="bg-gray-800 text-white py-10">
+      <div class="container mx-auto px-6 md:px-12">
+        <!-- Sección superior -->
+        <div class="flex flex-wrap justify-between items-center">
+          <!-- Logo y descripción -->
+          <div class="w-full md:w-1/3 mb-6 md:mb-0">
+            <img alt="Logo" class="mr-2" height="50" src="assets/demo-1-todo-tramite-11.png" width="200"/ style="margin: 0 auto;">
+            <p class="text-gray-400 mt-4">
+              Expertor en tramites vehiculares.
+            </p>
+          </div>
+    
+          <!-- Enlaces rápidos -->
+          <div class="w-full md:w-1/3 mb-6 md:mb-0" style="margin: 0 auto;">
+            <h3 class="text-lg font-semibold text-gray-100">Enlaces Rápidos</h3>
+            <ul class="mt-4 space-y-2" style="margin: 0 auto;">
+              <li><a href="#inicio" class="text-gray-400 hover:text-white">Inicio</a></li>
+              <li><a href="#servicios_requeridos" class="text-gray-400 hover:text-white">Servicios</a></li>
+              <li><a href="#contacto" class="text-gray-400 hover:text-white">Contacto</a></li>
+            </ul>
+          </div>
+    
+          <!-- Redes sociales -->
+          <div class="w-full md:w-1/3">
+            <h3 class="text-lg font-semibold text-gray-100">Síguenos</h3>
+            <div class="flex space-x-4 mt-4">
+              <a href="#" class="text-gray-400 hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42c-.84.37-1.74.62-2.69.73a4.67 4.67 0 0 0 2.05-2.57c-.9.53-1.9.91-2.96 1.12a4.66 4.66 0 0 0-7.95 4.26c-3.88-.2-7.33-2.06-9.63-4.89a4.63 4.63 0 0 0-.63 2.35c0 1.62.82 3.04 2.07 3.88a4.6 4.6 0 0 1-2.1-.57v.06a4.66 4.66 0 0 0 3.73 4.57 4.67 4.67 0 0 1-2.1.08 4.66 4.66 0 0 0 4.35 3.23A9.35 9.35 0 0 1 2 19.4a13.15 13.15 0 0 0 7.12 2.08c8.55 0 13.22-7.1 13.22-13.26 0-.2 0-.4-.02-.59.91-.65 1.7-1.47 2.32-2.4z"/></svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.99 3.66 9.1 8.44 9.88V14.89H8.57v-2.89h1.87V9.41c0-1.84 1.13-2.87 2.78-2.87.79 0 1.62.14 1.62.14v1.79h-.91c-.9 0-1.18.56-1.18 1.12v1.36h2l-.32 2.89h-1.68V22c4.78-.78 8.44-4.89 8.44-9.88 0-5.52-4.48-10-10-10z"/></svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9.62 3.35c.63-.07 1.26-.1 1.88-.1s1.25.03 1.88.1c.77.08 1.5.29 2.17.61.57.26 1.1.59 1.59 1.01.57.47 1.02 1.02 1.4 1.65.36.6.63 1.25.82 1.93.14.52.22 1.05.27 1.59.04.45.06.91.06 1.36s-.02.91-.06 1.36c-.05.54-.13 1.07-.27 1.59-.19.68-.46 1.33-.82 1.93-.37.63-.83 1.18-1.4 1.65-.49.42-1.02.75-1.59 1.01-.67.32-1.4.53-2.17.61-.63.07-1.26.1-1.88.1s-1.25-.03-1.88-.1c-.77-.08-1.5-.29-2.17-.61-.57-.26-1.1-.59-1.59-1.01-.57-.47-1.02-1.02-1.4-1.65-.36-.6-.63-1.25-.82-1.93-.14-.52-.22-1.05-.27-1.59-.04-.45-.06-.91-.06-1.36s.02-.91.06-1.36c.05-.54.13-1.07.27-1.59.19-.68.46-1.33.82-1.93.37-.63.83-1.18 1.4-1.65.49-.42 1.02-.75 1.59-1.01.67-.32 1.4-.53 2.17-.61z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Línea divisoria -->
+        <div class="border-t border-gray-700 mt-8"></div>
+    
+        <!-- Copyright -->
+        <div class="text-center text-gray-400 mt-4">
+          © 2024 Tu Marca. Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+    
+  </footer>
+
+  <script src="js/carousel.js"></script>
+  <script src="js/animaciones.js"></script>
+  
+  <script src="js/modal.js"></script>
+ </body>
+</html>

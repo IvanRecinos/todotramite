@@ -1,0 +1,17 @@
+@keyframes scale-up {
+    to {scale: 1.5;}
+}
+
+@keyframes fade-away {
+    to { opacity: 0;}
+}
+
+.servicios{
+    view-timeline: --scroll;
+}
+
+.circulos{
+    animation: fade-away both linear;
+    animation-timeline: --scroll ; 
+    animation-range: exit 150% exit 190%;
+}

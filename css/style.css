@@ -1,0 +1,18 @@
+body {
+    scroll-behavior: smooth;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+li{
+    text-align: justify;
+}
+
+.montserrat-underline {
+    font-family: "Montserrat Underline", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 25px;
+    font-style: normal;
+  }
